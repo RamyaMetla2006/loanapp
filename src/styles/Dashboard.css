@@ -1,0 +1,309 @@
+/* src/styles/Dashboard.css */
+
+.dashboard-root {
+  min-height: 100vh;
+  background: #f4f5fb;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.dashboard-shell {
+  width: 100%;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dashboard-header {
+  padding: 16px 24px;
+  background: linear-gradient(120deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dash-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.dash-subtitle {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.logout-btn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f97373;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #ef4444;
+}
+
+.dashboard-body {
+  display: flex;
+  min-height: 520px;
+}
+
+/* Sidebar */
+.dashboard-sidebar {
+  width: 230px;
+  background: #f9fafb;
+  border-right: 1px solid #e5e7eb;
+  padding: 20px 16px;
+  box-sizing: border-box;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  padding: 10px 12px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #374151;
+  transition: all 0.18s ease;
+}
+
+.menu-item:hover {
+  background: #e5f0ff;
+}
+
+.menu-item.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* Main */
+.dashboard-main {
+  flex: 1;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.section-title {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.global-message {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #ecfdf3;
+  color: #166534;
+  font-size: 0.9rem;
+  border: 1px solid #bbf7d0;
+}
+
+/* Forms */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.form-row label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-row input,
+.form-row textarea,
+.small-input {
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-row input:focus,
+.form-row textarea:focus,
+.small-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.15);
+}
+
+/* Buttons */
+.primary-btn,
+.secondary-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.1s ease;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.secondary-btn:hover {
+  background: #e5e7eb;
+}
+
+/* Tables */
+.table-wrapper {
+  margin-top: 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.data-table thead {
+  background: #f3f4f6;
+}
+
+.data-table th,
+.data-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table th {
+  font-weight: 600;
+  color: #374151;
+}
+
+.data-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Nested table for payments */
+.nested-table {
+  margin-top: 8px;
+}
+
+.payments-block {
+  margin-top: 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.payments-block summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* EMI pay row */
+.emi-pay-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.emi-pay-row input {
+  width: 70px;
+}
+
+/* Small button */
+.small-btn {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+/* Inputs */
+.small-input {
+  width: 70px;
+}
+
+/* Analytics */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.stat-card {
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.stat-card h3 {
+  font-size: 0.9rem;
+  margin: 0 0 6px;
+  color: #4b5563;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.stat-card.full-row {
+  grid-column: 1 / -1;
+}
+
+/* Misc */
+.muted-text {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
